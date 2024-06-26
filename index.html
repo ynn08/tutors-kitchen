@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
+
+</head>
+
+<body class="root">
+
+    <!-- <div class="page">
+        <header class="header">
+
+        </header>
+        <main class="content"></main>
+
+        <footer class="footer"></footer>
+    </div> -->
+
+
+    <div class="example">
+        <form>
+            <input class="test" id="test" type="checkbox">
+            <label for="test">check</label>
+
+
+            <input class="password" id="password" type="text">
+            <label for="password">password</label>
+        </form>
+    </div>
+
+
+    <script>
+        let test = document.querySelector('.test');
+        console.log(localStorage.getItem("test"));
+
+        test.addEventListener("click", function(){
+            localStorage.setItem("test", test.checked);
+            console.log(localStorage.getItem("test"));
+        });
+
+        if (localStorage.getItem("test") === "false"){
+            test.checked = false;
+        } else {
+            test.checked = true;
+        }
+        
+    </script>
+</body>
+
+</html>
